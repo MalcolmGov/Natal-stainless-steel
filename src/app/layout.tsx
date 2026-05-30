@@ -17,6 +17,14 @@ const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ??
   (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3003");
 
+const ogImage = {
+  url: "/og-image.jpg",
+  width: 1200,
+  height: 630,
+  alt: "Natal Stainless Steel",
+  type: "image/jpeg" as const,
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
@@ -42,11 +50,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_ZA",
     siteName: BRAND.name,
-    images: [{ url: "/images/hero-premium.jpg", width: 1536, height: 1024, alt: BRAND.name }],
+    url: siteUrl,
+    images: [ogImage],
   },
-  icons: {
-    icon: BRAND.logo,
-    apple: BRAND.logo,
+  twitter: {
+    card: "summary_large_image",
+    title: `${BRAND.name} | ${BRAND.tagline}`,
+    description:
+      "Quality stainless steel supply with large stock on hand. Serving South Africa since 1992.",
+    images: [ogImage.url],
   },
   robots: {
     index: true,
