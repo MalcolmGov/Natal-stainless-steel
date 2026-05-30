@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <rect width="120" height="120" rx="24" fill="#0c4d7f"/>
+  <circle cx="60" cy="60" r="42" stroke="#c5d0dc" stroke-width="3" opacity="0.9"/>
+  <text x="60" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="36" fill="#ffffff">NNS</text>
+</svg>
